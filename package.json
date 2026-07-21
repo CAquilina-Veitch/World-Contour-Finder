@@ -1,0 +1,18 @@
+{
+  "name": "world-contour-finder",
+  "version": "0.1.0",
+  "description": "Fly to a lat/long, drop a ground-snapped anchor, and clip an artistic 3D chunk of the world with a transparency fade.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cesium": "^1.121.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-cesium": "^1.2.23"
+  }
+}
