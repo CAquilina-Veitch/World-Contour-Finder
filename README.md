@@ -47,6 +47,21 @@ npm run build    # static site in dist/
 npm run preview
 ```
 
+## Deploy (GitHub Pages)
+
+A workflow at `.github/workflows/deploy.yml` builds and publishes the site via
+GitHub Actions on every push to `main`. To turn it on:
+
+1. Repo **Settings → Pages → Source = GitHub Actions** (one-time).
+2. Merge your work into `main` — that triggers the build and deploy. The live
+   URL appears in the Actions run and in Settings → Pages
+   (e.g. `https://<user>.github.io/World-Contour-Finder/`).
+
+The build uses `base: './'`, so it serves correctly from the project subpath
+with no extra config. If you use a Google Maps key with HTTP-referrer
+restrictions, add your Pages domain (`https://<user>.github.io/*`) to the key's
+allowed referrers so the photorealistic tiles load.
+
 ## How the clipping works
 
 The fade is a Cesium `CustomShader` applied to the active tileset. For each
