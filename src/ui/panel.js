@@ -71,10 +71,11 @@ const TEMPLATE = `
     <input id="feather" type="range" min="0" max="40" step="1" />
     <label>Clip mode</label>
     <div class="seg">
-      <button data-mode="fade" id="modeFade">Fade</button>
-      <button data-mode="hard" id="modeHard">Hard</button>
-      <button data-mode="off" id="modeOff">Off</button>
+      <button data-mode="fade" id="modeFade" title="Terrain cut to the box; buildings ghosted outside">Fade</button>
+      <button data-mode="hard" id="modeHard" title="Terrain and buildings both cut to the box">Hard</button>
+      <button data-mode="off" id="modeOff" title="No clipping">Off</button>
     </div>
+    <p class="hint">Terrain is always cut to the box while clipping is on; Fade/Hard only change how buildings render outside it.</p>
   </section>
 
   <section>

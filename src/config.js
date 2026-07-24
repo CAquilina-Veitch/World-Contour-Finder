@@ -26,11 +26,13 @@ export const DEFAULT_STATE = {
   rotation: 0 // yaw in radians (reserved; not yet editable in the UI)
 };
 
-// Clip / fade behaviour.
+// Clip / fade behaviour. In every active mode the terrain globe is hard-cut to
+// the box via a ClippingPlaneCollection (see shading/clipPlanes.js); the mode
+// only changes how the tileset (buildings / mesh) renders outside the box.
 export const CLIP_MODE = {
-  fade: 'fade', // translucent CustomShader fade outside the box
-  hard: 'hard', // ClippingPlaneCollection hard cut
-  off: 'off' // no clipping
+  fade: 'fade', // tileset fades (translucent CustomShader) + terrain cut
+  hard: 'hard', // tileset hard-discards + terrain cut
+  off: 'off' // no clipping anywhere
 };
 
 export const DEFAULTS = {
